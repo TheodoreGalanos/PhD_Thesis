@@ -1,0 +1,12 @@
+- file: focus
+
+- part: Proposal
+  chapters:
+  - file: system
+  - file: transdisciplinary
+  - file: initiator
+  - file: encoder
+  - file: generator
+  - file: prophet
+  - file: learner
+  - file: critic

@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learner &#8212; Designing with Intelligence - A General Framework for Mixed-Initiative Generative Design</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Critic" href="critic.html" />
+    <link rel="prev" title="Prophet" href="prophet.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Designing with Intelligence - A General Framework for Mixed-Initiative Generative Design</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="focus.html">
+   Research focus
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Proposal
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="system.html">
+   A Quick overview of the proposed generative design system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="transdisciplinary.html">
+   Transdisciplinary approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="initiator.html">
+   Initiator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="encoder.html">
+   Encoder
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="generator.html">
+   Generator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prophet.html">
+   Prophet
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Learner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="critic.html">
+   Critic
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/learner.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="learner">
+<h1>Learner<a class="headerlink" href="#learner" title="Permalink to this headline">¶</a></h1>
+<p>The Learner module is responsible for distilling knowledge generated from the interaction of the system and human designer in ways that allow later retrieval and use of that knowledge in downstream tasks with the goal to provide access to novel ways of doing search through a design space and to open up new avenues of understanding implications of decisions throughout the design process. To be more precise, the Learner focuses on two aspects of knowledge within the system: (i) knowledge related to the designs generated, and the design space that describes them;  (ii) knowledge related to the human designer and her preferences. There are many ideas involved in knowledge distillation of this kind, however the two main domains of research that will be involved are <strong>representation learning</strong>, mostly involving Deep Learning (DL) models that learn the latent structure of the design data produced and <strong>preference learning</strong>  which tries to induce predictive preference models from empirical data <a class="bibtex reference internal" href="#furnkranz2010" id="id1">[FurnkranzHullermeier10]</a>, produced by the interaction of the human designer with the system.</p>
+<p>Search is typically a process of applying operators that move between design states, points in the representation space <a class="bibtex reference internal" href="#woodbury-searching-1991" id="id2">[Woo91]</a>. The Learner module can allow designers to conduct search in this way only in, mostly, lower dimensional representations. To accomplish this, self-supervised learning (SSL) models and techniques will be used to learn latent representations (embeddings) of the design space. SSL has made great strides in the last few years and has provided a tremendous improvement to the performance of many unsupervised learning (UL) models (<a class="bibtex reference internal" href="#cpc2018" id="id3">[vdOLV18]</a>, <a class="bibtex reference internal" href="#cpc2019" id="id4">[HenaffSF+19]</a>, <a class="bibtex reference internal" href="#mixmax2019" id="id5">[BCG+19]</a>, <a class="bibtex reference internal" href="#misra2019selfsupervised" id="id6">[MvdM19]</a>, <a class="bibtex reference internal" href="#simclr2020" id="id7">[CKNH20]</a>, <a class="bibtex reference internal" href="#he2020momentum" id="id8">[HFW+20]</a>, and <a class="bibtex reference internal" href="#shu2020weakly" id="id9">[SCK+20]</a> among others) while at the same time also improving supervised learning (SL) models, becoming a strong component of almost all ML tasks and especially those running on low data regimes. SSL models utilize smart pretext tasks to learn useful representations from unlabeled data, making them an ideal methodology for a generative design system. Different embeddings will be learned according to the different types of inputs to these models. An input space embedding will be learned using data received from the Generator and a performance-space embedding will be learned using data received from Prophet. Latent space representations have the advantage of distilling the important aspects of a high-dimensional space, like architectural design, into a lower dimensional representation that the system and designer can use to search, analyze, and navigate design spaces along important and potentially interesting dimensions of the space.</p>
+<p>On the other hand, considerable amount of information can be extracted from the preferences of the human design, as she operates the system. A preference can be consider as a form of relaxed constraint which can be violated to some degree <a class="bibtex reference internal" href="#furnkranz2010" id="id10">[FurnkranzHullermeier10]</a>. Preference Learning (PL) mainly involves the problem of ranking, i.e. learning a function that predicts the preferences for a set of items, in this case designs.  PL methods can be categorized through the types of ranking problems and the learning techniques employed. There are generally three types of problems label ranking, instance ranking, and object ranking, with the latter possibly more relevant to a generative design system which by definition generates sets of objects (designs). Different techniques are also possible such as utility functions, preference relations, model-based PL, and local aggregation methods. PL has also led to new interactive alternatives of search and evolutionary algorithms <a class="bibtex reference internal" href="#alvarez-2020" id="id11">[AF20]</a> embedded within mixed-initiative co-creativity (MI-CC) design tools. These approaches focus on learning what is called Designer Preference models, which allows for adaptation and personalization of the design experience, while balancing between expressivity (of the Generator) and controllability by the human designer. Data-driven approaches of Designer Preference models <a class="bibtex reference internal" href="#alvarez-2020" id="id12">[AF20]</a> integrate the idea of preference learning within the evolutionary loop that is responsible for selection, evolution, generation, and evaluation of design alternatives within the system.</p>
+<div class="figure align-center" id="figure-4">
+<img alt="_images/Learner_Process-chart.jpg" src="_images/Learner_Process-chart.jpg" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Schematic representation of the Learner’s function and relationship with the other system modules.</span><a class="headerlink" href="#figure-4" title="Permalink to this image">¶</a></p>
+</div>
+<p>The Learner module represents an unknown in relation to the field of Architectural design since neither the idea of SSL nor PL used to extract knowledge and inform the generative design process of the system in a mixed-initiative setting has been done before. It’s a practitioner’s challenge rather than a theoretical one, and trial and error across different embedding approaches and DL architectures in order to understand which one will work best, and in which specific design tasks, will be required. Another important issue is that of finding intelligent data augmentation techniques and pretext tasks – an important aspect of SSL– that do not invalidate input data (e.g. rotating a CFD simulation output invalidates the result given it is related to orientation of wind and building massing).  Additionally, training these models can take time and is certainly something that will need to happen in an offline setting. However, as this process can be automated, the user could improve her own models by fine-tuning previous trained models, or train new specialized models, simply by using the system. On the Preference Learning side, it will be required to obtain labelled data regarding preference in relation to specific designs in an intuitive manner through the interface of the system and the accuracy and efficacy of these models and their interventions in the evolutionary process will need to be investigated thoroughly.</p>
+<p>Despite these open questions, the Learner is an exciting addition to the system, as well as it is timely. The SSL revolution currently taking place, especially in deep metric learning, provides a great methodology of learning and constructing good embeddings of design spaces. The system can then use these representations in a multitude of ways and can allow transfer of information and knowledge across different design tasks (e.g. capturing design style of designer). The Learner module can provide  valuable feedback to the Generator and guide generation in the latent space and can also inform the design process downstream by providing new ways to evaluate design performance to the Critic. The latter can be done by designing a neural approach to assessing novelty of designs, through their position in the latent space. Finally, the Learner can provide novel insights to Aesop where these embeddings can be used to visualize the design space in different ways: identify clusters of designs, interpolate between alternatives, and find correlations between performance metrics and latent dimensions. All this provides a possibility to create models that can potentially encode certain, sometimes required, characteristics such as architectural style, typology, and cultural preferences.</p>
+<p><strong>References:</strong></p>
+<p id="bibtex-bibliography-learner-0"><dl class="citation">
+<dt class="bibtex label" id="alvarez-2020"><span class="brackets">AF20</span><span class="fn-backref">(<a href="#id11">1</a>,<a href="#id12">2</a>)</span></dt>
+<dd><p>Alberto Alvarez and Jose Font. Learning the designer’s preferences to drive evolution. <em>Lecture Notes in Computer Science</em>, pages 431–445, 2020. URL: <a class="reference external" href="http://dx.doi.org/10.1007/978-3-030-43722-0_28">http://dx.doi.org/10.1007/978-3-030-43722-0_28</a>, <a class="reference external" href="https://doi.org/10.1007/978-3-030-43722-0_28">doi:10.1007/978-3-030-43722-0_28</a>.</p>
+</dd>
+<dt class="bibtex label" id="mixmax2019"><span class="brackets"><a class="fn-backref" href="#id5">BCG+19</a></span></dt>
+<dd><p>David Berthelot, Nicholas Carlini, Ian J. Goodfellow, Nicolas Papernot, Avital Oliver, and Colin Raffel. Mixmatch: A holistic approach to semi-supervised learning. <em>CoRR</em>, 2019. URL: <a class="reference external" href="http://arxiv.org/abs/1905.02249">http://arxiv.org/abs/1905.02249</a>, <a class="reference external" href="https://arxiv.org/abs/1905.02249">arXiv:1905.02249</a>.</p>
+</dd>
+<dt class="bibtex label" id="simclr2020"><span class="brackets"><a class="fn-backref" href="#id7">CKNH20</a></span></dt>
+<dd><p>Ting Chen, Simon Kornblith, Mohammad Norouzi, and Geoffrey Hinton. A simple framework for contrastive learning of visual representations. 2020. <a class="reference external" href="https://arxiv.org/abs/2002.05709">arXiv:2002.05709</a>.</p>
+</dd>
+<dt class="bibtex label" id="furnkranz2010"><span class="brackets">FurnkranzHullermeier10</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id10">2</a>)</span></dt>
+<dd><p>Johannes Fürnkranz and Eyke Hüllermeier. <em>Preference Learning</em>, pages 789–795. Springer US, Boston, MA, 2010. URL: <a class="reference external" href="https://doi.org/10.1007/978-0-387-30164-8_662">https://doi.org/10.1007/978-0-387-30164-8_662</a>, <a class="reference external" href="https://doi.org/10.1007/978-0-387-30164-8_662">doi:10.1007/978-0-387-30164-8_662</a>.</p>
+</dd>
+<dt class="bibtex label" id="he2020momentum"><span class="brackets"><a class="fn-backref" href="#id8">HFW+20</a></span></dt>
+<dd><p>Kaiming He, Haoqi Fan, Yuxin Wu, Saining Xie, and Ross Girshick. Momentum contrast for unsupervised visual representation learning. 2020. <a class="reference external" href="https://arxiv.org/abs/1911.05722">arXiv:1911.05722</a>.</p>
+</dd>
+<dt class="bibtex label" id="cpc2019"><span class="brackets"><a class="fn-backref" href="#id4">HenaffSF+19</a></span></dt>
+<dd><p>Olivier J. Hénaff, Aravind Srinivas, Jeffrey De Fauw, Ali Razavi, Carl Doersch, S. M. Ali Eslami, and Aäron van den Oord. Data-efficient image recognition with contrastive predictive coding. <em>CoRR</em>, 2019. URL: <a class="reference external" href="http://arxiv.org/abs/1905.09272">http://arxiv.org/abs/1905.09272</a>, <a class="reference external" href="https://arxiv.org/abs/1905.09272">arXiv:1905.09272</a>.</p>
+</dd>
+<dt class="bibtex label" id="misra2019selfsupervised"><span class="brackets"><a class="fn-backref" href="#id6">MvdM19</a></span></dt>
+<dd><p>Ishan Misra and Laurens van der Maaten. Self-supervised learning of pretext-invariant representations. 2019. <a class="reference external" href="https://arxiv.org/abs/1912.01991">arXiv:1912.01991</a>.</p>
+</dd>
+<dt class="bibtex label" id="shu2020weakly"><span class="brackets"><a class="fn-backref" href="#id9">SCK+20</a></span></dt>
+<dd><p>Rui Shu, Yining Chen, Abhishek Kumar, Stefano Ermon, and Ben Poole. Weakly supervised disentanglement with guarantees. 2020. <a class="reference external" href="https://arxiv.org/abs/1910.09772">arXiv:1910.09772</a>.</p>
+</dd>
+<dt class="bibtex label" id="cpc2018"><span class="brackets"><a class="fn-backref" href="#id3">vdOLV18</a></span></dt>
+<dd><p>Aäron van den Oord, Yazhe Li, and Oriol Vinyals. Representation learning with contrastive predictive coding. <em>CoRR</em>, 2018. URL: <a class="reference external" href="http://arxiv.org/abs/1807.03748">http://arxiv.org/abs/1807.03748</a>, <a class="reference external" href="https://arxiv.org/abs/1807.03748">arXiv:1807.03748</a>.</p>
+</dd>
+<dt class="bibtex label" id="woodbury-searching-1991"><span class="brackets"><a class="fn-backref" href="#id2">Woo91</a></span></dt>
+<dd><p>Robert F. Woodbury. Searching for designs: paradigm and practice. <em>Building and Environment</em>, 26(1):61–73, 1991.</p>
+</dd>
+</dl>
+</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="prophet.html" title="previous page">Prophet</a>
+    <a class='right-next' id="next-link" href="critic.html" title="next page">Critic</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Theodoros Galanos<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>
