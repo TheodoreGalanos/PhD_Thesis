@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encoder &#8212; Designing with Intelligence - A General Framework for Mixed-Initiative Generative Design</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Generator" href="generator.html" />
+    <link rel="prev" title="Initiator" href="initiator.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Designing with Intelligence - A General Framework for Mixed-Initiative Generative Design</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="focus.html">
+   Research focus
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Proposal
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="system.html">
+   A Quick overview of the proposed generative design system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="transdisciplinary.html">
+   Transdisciplinary approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="initiator.html">
+   Initiator
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Encoder
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="generator.html">
+   Generator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prophet.html">
+   Prophet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="learner.html">
+   Learner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="critic.html">
+   Critic
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/encoder.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="encoder">
+<h1>Encoder<a class="headerlink" href="#encoder" title="Permalink to this headline">¶</a></h1>
+<p>The Encoder is the interpreter of the system, responsible of translating design inputs into representations that the Generator will understand. The Encoder’s role is crucial since representation is perhaps the most important aspect of every generative system, as it defines what can be generated and determines whether effective search is possible <a class="bibtex reference internal" href="generator.html#togelius2016pcg" id="id1">[ST16]</a>. The Encoder module is connected to the Initiator, Generator and Critic modules but has the strongest effect on the Generator and the generation process. Different types of representations lead to sometimes completely different generative schemes and output designs, so selecting appropriate representations is crucial.</p>
+<p>When talking about representations, it will be helpful to define a taxonomy of content that the system can work with and the Encoder is able to represent. This taxonomy is specific to the AEC and closely relates to the hierarchical structure of the system we described earlier:</p>
+<ul class="simple">
+<li><p>bits: elementary units of designs, for example in the case of construction components these can be windows, walls, partitions, doors, furniture, etc.</p></li>
+<li><p>spaces: minimal structures that define areas that share similar properties, for example in the case residential typologies these can be the living room, dining room, bedroom, corridor, kitchen, bathroom, etc.</p></li>
+<li><p>context: anything relevant to the generation of designs that is outside of the design itself but impacts design performance and requirements, this can include location, orientation, climate data, building floor plan, building massing, plot boundaries, urban context, depending on the design problem.</p></li>
+<li><p>adjacency: graph data that captures relationships, connections, navigation and other aspects of space structure</p></li>
+<li><p>metrics: either direct (e.g. area, volume, cost, counts ,etc.) or indirect, simulated metrics such as daylight performance, natural ventilation, energy consumption, occupant comfort and more.</p></li>
+</ul>
+<p>It is important here to remember that due to the hierarchical structure of the system itself every layer of the representation taxonomy is embedded into the layer after it. For example, spaces are made of bits, while a floor plan is made out of spaces and adjacencies. An adjacency is possible between bits, spaces and contexts while metrics can be quantified for a bit (e.g. number of instances for a specific component), for a space (e.g. daylight performance of a bedroom), or for a whole floor and context (e.g. wind and thermal comfort). The Encoder module is responsible for keeping track of all this information and communicating it to the other system modules that require it for their function.</p>
+<p>There is a considerable history of research on representation, both in relation to architectural and engineering design and more more generally in the context of evolutionary computation (EC). One of the earliest works in the former domain is by Charles Eastman <a class="bibtex reference internal" href="#eastman1970" id="id2">[Eas70]</a>, investigating the issue of representation in the design world. Eastman draws from insights collected by human designers as to what is important in a drawing. The survey highlighted the importance of clear demarcation of spatial domains, homogeneity in the way designs are represented and availability of all spatial information to the designer. Eastman goes on to give an early proposal of different ways of computational representations of space, focusing on the use of arrays and strings as data structures and on shapes, dimensions and adjacencies as elements. Perhaps the most thorough investigation of representation in design is by Woodbury <a class="bibtex reference internal" href="#woodbury199161" id="id3">[Woo91]</a>. The paper takes an equally transdisciplinary approach in an effort to understand the concepts of representation, design space, and search, using a nexus of intellectual sources including linguistics, set and graph theory, cognitive psychology and AI. The work positions representation within a formalized system of design and search which includes the aspects of modeling, representations, expressivity, range, and operators.  It also highlights the important relationship between representation and search, with properties of the former influencing properties of the latter. It goes on to detail two different approaches to design representation, an expert system approach that relies on prior knowledge <a class="bibtex reference internal" href="#flemming1988" id="id4">[FUC+88]</a> and shape grammars <a class="bibtex reference internal" href="#stiny1971shapega" id="id5">[SG71]</a>, with the latter having great potential for both representation and generative capacity.  Woodbury’s work provides the basis for a formal framework of generative design and has potential synergies with more modern developments in AI and specifically in Quality Diversity and the understanding of search and design space there.</p>
+<p>While there is ample research in the AEC domain concerning these concepts we turn once again to Gaming AI and specifically procedural content generation (PCG) for practical examples of tools that were developed with the explicit purpose of generating alternative designs. Representation, as we expect, plays a major role in this work. Togelius et al. <a class="bibtex reference internal" href="#search2010" id="id6">[TYSB10]</a> provide a good introduction to how representation can be formalized, introducing the main formal distinction for representation, that of direct and indirect encodings. Yannakakis et al. <a class="bibtex reference internal" href="#multiobj2010" id="id7">[TogeliusPreussBeume+10]</a> present an Evolutionary Multiobjective Optimization Algorithm (EMOA) and propose a mixed encoding scheme which combines a direct representation, a 64x64 heightmap, only used during fitness and visualization and an indirect representation, a fixed-length array of real values between 0 and 1, which is used to efficiently search for new designs. The paper highlights an important area of investigation, the trade-offs between direct and indirect representations in different stages of the generative design process. Shaker et al. <a class="bibtex reference internal" href="#shaker2012" id="id8">[ShakerNicolauYannakakis+12]</a> propose a different approach to representation, utilizing Grammatical Evolution <a class="bibtex reference internal" href="#grammaticaldesign1997" id="id9">[Brown97]</a> and shape grammars to generate Super Mario Bros. game levels. The levels are represented as set of chunks that include geometry and properties. GE allows for the incorporation of domain knowledge through the ability of human designer to design her own representations (chunks). The work highlights the potential of GE representations due to their compact descriptions and efficiency. Sorenson et al. (ref here) present a functional approach to representation where the whole level is an individual in the evolutionary process. They represent the level using a dirac function, with a 0 value everywhere (initial state) apart from where components are introduced where value is 1. Evaluation focuses on high-level semantic attributes, in this case anxiety and fun, which raises the important question of which similarly important, semantically meaningful parameters can be used in the context of architectural design, and how can they be represented as a generative process. Returning closer to the AEC domain, Hornby and Pollack <a class="bibtex reference internal" href="#hornby2001" id="id10">[HornbyPollack01]</a> introduce generative encodings for generating physical design, and instead of directly representing geometries with components and parameters they use rules to construct a phenotype. A special case of L-Systems <a class="bibtex reference internal" href="#geneticl1984" id="id11">[Jac94]</a> is used for defining the parametric, context-free rules. This process produces very robust representations which allow for mutation and recombination to happen at multiple levels and in different ways. The way to allow for robust and expressive ways of generating alternatives in the highly constrained design tasks that are common in the AEC is an important area for further research.</p>
+<p>As is evident from the diversity of approaches to representation, finding efficient ways to represent designs, for different tasks, is the biggest challenge of the Encoder module. Despite the research conducted in other domains, this has not been researched in AEC practice thoroughly. A further, domain-specific challenge is that architectural and engineering design typically involve different modalities of input data, such as text, images, textures, meshes, time series, vectors, and more. Any generative system that aims to develop design solutions that can be helpful in the real world needs to accommodate for these modalities and take advantage when possible of the information they offer during generation. Efficient preprocessing and encoding procedures for each of these modalities will be an important aspect of the Encoder module. Similarly to the Initiator, the Encoder module provides the opportunity to learn relationships between different types of inputs the user inputs and different design tasks the use tries to solve. This is because efficient representations that are fit for purpose will perform well and can be retained and reused. Automating this process, or at least abstracting it enough to make it intuitive and easy-to-use, is crucial to lower the barriers of entry for designers to use the system.</p>
+<p><strong>References:</strong></p>
+<p id="bibtex-bibliography-encoder-0"><dl class="citation">
+<dt class="bibtex label" id="eastman1970"><span class="brackets"><a class="fn-backref" href="#id2">Eas70</a></span></dt>
+<dd><p>Charles M. Eastman. Representations for space planning. <em>Commun. ACM</em>, 13(4):242–250, April 1970. URL: <a class="reference external" href="https://doi.org/10.1145/362258.362281">https://doi.org/10.1145/362258.362281</a>, <a class="reference external" href="https://doi.org/10.1145/362258.362281">doi:10.1145/362258.362281</a>.</p>
+</dd>
+<dt class="bibtex label" id="flemming1988"><span class="brackets"><a class="fn-backref" href="#id4">FUC+88</a></span></dt>
+<dd><p>Ulrich Flemming, Ulrich, Coyne, Robert Glavin, and Timothy al. A generative expert system for the design of building layouts – version 2. <em>Artificial Intelligence in Engineering: Design. editor. John J. Gero. Elsevier (Computational Mechanics Publications), 1988. PP. 445-464 : ill. includes bibliography</em>, pages, 01 1988.</p>
+</dd>
+<dt class="bibtex label" id="geneticl1984"><span class="brackets"><a class="fn-backref" href="#id11">Jac94</a></span></dt>
+<dd><p>Christian Jacob. Genetic l-system programming. In Yuval Davidor, Hans-Paul Schwefel, and Reinhard Männer, editors, <em>Parallel Problem Solving from Nature — PPSN III</em>, 333–343. Berlin, Heidelberg, 1994. Springer Berlin Heidelberg.</p>
+</dd>
+<dt class="bibtex label" id="togelius2016pcg"><span class="brackets"><a class="fn-backref" href="#id1">ST16</a></span></dt>
+<dd><p>Noor Shaker and Julian Togelius. The search-based approach. In Noor Shaker, Julian Togelius, and Mark J. Nelson, editors, <em>Procedural Content Generation in Games</em>, pages 17–29. Springer, 2016.</p>
+</dd>
+<dt class="bibtex label" id="stiny1971shapega"><span class="brackets"><a class="fn-backref" href="#id5">SG71</a></span></dt>
+<dd><p>G. Stiny and J. Gips. Shape grammars and the generative specification of painting and sculpture. In <em>IFIP Congress</em>. 1971.</p>
+</dd>
+<dt class="bibtex label" id="search2010"><span class="brackets"><a class="fn-backref" href="#id6">TYSB10</a></span></dt>
+<dd><p>Julian Togelius, Georgios N. Yannakakis, Kenneth O. Stanley, and Cameron Browne. Search-based procedural content generation. In Cecilia Di Chio, Stefano Cagnoni, Carlos Cotta, Marc Ebner, Anikó Ekárt, Anna I. Esparcia-Alcazar, Chi-Keong Goh, Juan J. Merelo, Ferrante Neri, Mike Preuß, Julian Togelius, and Georgios N. Yannakakis, editors, <em>Applications of Evolutionary Computation</em>, 141–150. Berlin, Heidelberg, 2010. Springer Berlin Heidelberg.</p>
+</dd>
+<dt class="bibtex label" id="woodbury199161"><span class="brackets"><a class="fn-backref" href="#id3">Woo91</a></span></dt>
+<dd><p>Robert F. Woodbury. Searching for designs: paradigm and practice. <em>Building and Environment</em>, 26(1):61 – 73, 1991. Special Issue Developments in Computer-Aided Design. URL: <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/036013239190040I">http://www.sciencedirect.com/science/article/pii/036013239190040I</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1016/0360-1323(91)90040-I">doi:https://doi.org/10.1016/0360-1323(91)90040-I</a>.</p>
+</dd>
+<dt class="bibtex label" id="grammaticaldesign1997"><span class="brackets"><a class="fn-backref" href="#id9">Brown97</a></span></dt>
+<dd><p>K. Brown. Grammatical design. <em>IEEE Expert</em>, 12(2):27–33, 1997.</p>
+</dd>
+<dt class="bibtex label" id="hornby2001"><span class="brackets"><a class="fn-backref" href="#id10">HornbyPollack01</a></span></dt>
+<dd><p>G. S. Hornby and J. B. Pollack. The advantages of generative grammatical encodings for physical design. In <em>Proceedings of the 2001 Congress on Evolutionary Computation (IEEE Cat. No.01TH8546)</em>, volume 1, 600–607 vol. 1. 2001.</p>
+</dd>
+<dt class="bibtex label" id="shaker2012"><span class="brackets"><a class="fn-backref" href="#id8">ShakerNicolauYannakakis+12</a></span></dt>
+<dd><p>N. Shaker, M. Nicolau, G. N. Yannakakis, J. Togelius, and M. O’Neill. Evolving levels for super mario bros using grammatical evolution. In <em>2012 IEEE Conference on Computational Intelligence and Games (CIG)</em>, volume, 304–311. 2012.</p>
+</dd>
+<dt class="bibtex label" id="multiobj2010"><span class="brackets"><a class="fn-backref" href="#id7">TogeliusPreussBeume+10</a></span></dt>
+<dd><p>J. Togelius, M. Preuss, N. Beume, S. Wessing, J. Hagelbäck, and G. N. Yannakakis. Multiobjective exploration of the starcraft map space. In <em>Proceedings of the 2010 IEEE Conference on Computational Intelligence and Games</em>, volume, 265–272. 2010.</p>
+</dd>
+</dl>
+</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="initiator.html" title="previous page">Initiator</a>
+    <a class='right-next' id="next-link" href="generator.html" title="next page">Generator</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Theodoros Galanos<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

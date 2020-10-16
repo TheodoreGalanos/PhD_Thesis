@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Quick overview of the proposed generative design system &#8212; Designing with Intelligence - A General Framework for Mixed-Initiative Generative Design</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Transdisciplinary approach" href="transdisciplinary.html" />
+    <link rel="prev" title="Research focus" href="focus.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Designing with Intelligence - A General Framework for Mixed-Initiative Generative Design</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="focus.html">
+   Research focus
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Proposal
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   A Quick overview of the proposed generative design system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="transdisciplinary.html">
+   Transdisciplinary approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="initiator.html">
+   Initiator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="encoder.html">
+   Encoder
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="generator.html">
+   Generator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prophet.html">
+   Prophet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="learner.html">
+   Learner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="critic.html">
+   Critic
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/system.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-problem-of-defining-intelligence">
+   The problem of defining intelligence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-modular-hierarchical-system">
+   A modular, hierarchical system
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="a-quick-overview-of-the-proposed-generative-design-system">
+<h1>A Quick overview of the proposed generative design system<a class="headerlink" href="#a-quick-overview-of-the-proposed-generative-design-system" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-problem-of-defining-intelligence">
+<h2>The problem of defining intelligence<a class="headerlink" href="#the-problem-of-defining-intelligence" title="Permalink to this headline">¶</a></h2>
+<p>The difficulty in even understanding how we could one day achieve general intelligence outside of humans is clearly evident in the difficulty to even define what intelligence is. In the context of AI research, Legg and Hutter <a class="bibtex reference internal" href="#legg2007collection" id="id1">[LH07]</a>  summarized no fewer than 70 definitions from the literature into a single statement: “Intelligence measures an agent’s ability to achieve goals in a wide range of environments.”</p>
+<p>In general we find two different characterizations in definitions of intelligence: one that focuses on task-specific skills and one that is focused on adaptation across many different environments and skills. The first of these is nicely summarized by Minsky’s famous 1968 definition of AI: “AI is the science of making machines capable of performing tasks that would require intelligence if done by humans” <a class="bibtex reference internal" href="#minsky1968" id="id2">[Min69]</a>, which focuses almost entirely on skills acquired at narrow tasks normally handled by humans and has since resulted in “.. developing artificial systems that perform these tasks without featuring intelligence”. <a class="bibtex reference internal" href="#orallo2017" id="id3">[HernandezO17]</a> The second, contrary to the task-focused approach, posits that intelligence instead “lies in the general ability to acquire new skills through learning; an ability that could be directed to a wide range of previously unknown problems”. <a class="bibtex reference internal" href="#chollet2019measure" id="id4">[Cho19]</a> This describes the mind as being more flexible and with the capacity to learn new skills through experience, experimentation, learning and failure.</p>
+<p>While both approaches have their own issues with the almost impossible task of defining and formalizing intelligence, it is quite easy to induce that the second one lends itself to the problem of design intelligence and the road towards a generative design system that is able to to adapt and perform under different design constraints, in entirely new design domains and sets of problems. Essentially, the goal of such a system would be to handle design problems and situations that it has not encountered before with relative capability and quality results. One more detail for the design of such a system comes from the two most important theories of human intelligence (<a class="bibtex reference internal" href="#vpr2005" id="id5">[BJ05]</a><a class="bibtex reference internal" href="#chc2005" id="id6">[McG05]</a>) which organize human cognitive abilities in a hierarchal fashion, with the strata of general intelligence at the top, broad abilities in the middle, and specialized skills and tasks at the bottom (Figure 1).</p>
+<div class="figure align-center" id="figure-1">
+<a class="reference internal image-reference" href="_images/chc.png"><img alt="_images/chc.png" src="_images/chc.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">CHC’s three-stratum theory presented three levels of cognition: narrow abilities (stratum I), broad abilities (stratum II) and general abilities (stratum III).</span><a class="headerlink" href="#figure-1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="a-modular-hierarchical-system">
+<h2>A modular, hierarchical system<a class="headerlink" href="#a-modular-hierarchical-system" title="Permalink to this headline">¶</a></h2>
+<p>This assumption that information and intelligence follows a modular-hierarchical structure is a guiding principle for the design of the proposed system. The vision is that of a mixed-initiative interface that works along with human designer (stratum III) and on a range of different design domains and problems. Tackling these complex tasks can be made possible by a hierarchical and modular structure, where each module is a specialized and task-specific node (stratum I), and each iteration of the system is composed and (re)configured by different organizations of these modules (stratum II) in order to tackle a large diversity of complex design tasks. DI therefore is thought of as a meta-learning process taking place between the human designer and the tool as she interacts, explores, (re)combines, and (re)composes configurations of different modules specialized in specific design tasks, such as searching, learning, encoding, generating, manipulating, quantifying, and communicating designs and design performance. The mixed-initiative aspect of the system becomes crucial and acts as an evolutionary shortcut to Chollet’s idea of a meta-learning algorithm which is responsible for the operation of such a system. Human intelligence, from the side of the human designer, makes the whole system work.</p>
+<p>Another way of understanding these modules is to view them through the roles they each play in the functioning of the system and in the design process itself. This also provides a useful heuristic for naming these modules according to their function (Figure 2). The Initiator  is responsible for capturing design inputs and constraints from the human designer in an easy and intuitive way and formatting them in a way that they can be used by the other modules of the system.  The Encoder is responsible for encoding input parameters to design representations (genotypes) that the system can use to evolve, visualize and evaluate individual designs. The Generator  is responsible for creating generative programs out of encoded representations and user defined constraints. These programs will then produce a collection of alternative designs to be evaluated and explored. The Prophet is responsible for quantifying design performance for each Generator output through the use of surrogate, pretrained deep learning (DL) models. The Learner is responsible for distilling the structures that are embedded in the collection of generated designs and does that by creating latent representations (embeddings) of all Generator and Prophet outputs. This allows the Learner to examine both input and performance latent spaces. The Critic is responsible for evaluating every design along with its quantified performance and selecting interesting or well-performing designs according to criteria set by the user. The Profiler is responsible for learning  from the human designer’s preferences, especially focusing on the relationship between inputs/constraints, design space, and performance. Finally, Aesop is responsible for extracting and communicating design intelligence to the human designer about the current design task, extracted from the data produced by the system.</p>
+<div class="figure align-center" id="figure-2">
+<img alt="_images/Module_contept_map.jpg" src="_images/Module_contept_map.jpg" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Roles and modules of the proposed design generation system and the relationships between them, arrows denote data transfer.</span><a class="headerlink" href="#figure-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>The modular nature of the system can manifest in a hierarchical manner, at three different conceptual levels, with potential practical implications:</p>
+<ul class="simple">
+<li><p><strong>At the level of the module</strong>. The modules themselves can include multiple algorithms, techniques, models, methods, and code, depending on the task. For example, the Generator module can use different generative techniques, the Critic module can use different evaluation methods, the Aesop module can use multiple visualization strategies for the user to select. Thus, each module is in itself modular in a way, a very important property for addressing a diversity of complex tasks. This can potentially allow he designer to create recipes, specific combinations of modules, methods, and representations, for specific tasks.</p></li>
+<li><p><strong>At the level of the system</strong>. The modules can be combined in different ways to create different versions of the system that can deal more efficiently with different tasks and goals which allows for hierarchical adaptation, at the system and module level, to different problem requirements. From this perspective, the system also implies an open-endedness in its structure with the potential of new modules, specialised in additional, new tasks, added by human designers in the future.</p></li>
+<li><p><strong>At the level of design</strong>. It is also possible to use the system at different levels of the hierarchy of design. In fact, the case studies that the research will involve are designed to reflect exactly this plasticity of application. The system will be applied to urban design, massing design, floor plan design, layout design, and finally component design. At each different level of this hierarchy, from component to layout, from floor plan to building massing and urban design, the system will potentially explore the use of different representations, generative methods, evaluation processes, and fitness functions. Finally, since performance at these different levels is highly coupled, information exchange between them with regards to performance will be explored and the  impact on solutions at individual levels evaluated.</p></li>
+</ul>
+<p>Apart from being the central components of the proposed system, these modules and their function also guide the required literature analysis for the proposed research. This will need to cover issues and ideas concerning design representation and encoding, generative models and techniques, representation learning, evolutionary computation, search and optimization, latent space exploration and model interpretability, preference learning, gaming AI, mixed-initiative design, UI/UX design and visualization. The research questions along with a brief review of the state-of-the-art in these fields, highlighting the important ideas and research that will be useful for the development of the system, will be detailed in the next sections.</p>
+<p><strong>References:</strong></p>
+<p id="bibtex-bibliography-system-0"><dl class="citation">
+<dt class="bibtex label" id="vpr2005"><span class="brackets"><a class="fn-backref" href="#id5">BJ05</a></span></dt>
+<dd><p>Thomas Bouchard Jr. The structure of human intelligence: it is verbal, perceptual, and image rotation (vpr), not fluid and crystallized. <em>Intelligence</em>, 33:393–416, 07 2005. <a class="reference external" href="https://doi.org/10.1016/j.intell.2004.12.002">doi:10.1016/j.intell.2004.12.002</a>.</p>
+</dd>
+<dt class="bibtex label" id="chollet2019measure"><span class="brackets"><a class="fn-backref" href="#id4">Cho19</a></span></dt>
+<dd><p>François Chollet. On the measure of intelligence. 2019. <a class="reference external" href="https://arxiv.org/abs/1911.01547">arXiv:1911.01547</a>.</p>
+</dd>
+<dt class="bibtex label" id="orallo2017"><span class="brackets"><a class="fn-backref" href="#id3">HernandezO17</a></span></dt>
+<dd><p>José Hernández-Orallo. Evaluation in artificial intelligence: from task-oriented to ability-oriented measurement. <em>Artif. Intell. Rev.</em>, 48(3):397–447, October 2017. URL: <a class="reference external" href="https://doi.org/10.1007/s10462-016-9505-7">https://doi.org/10.1007/s10462-016-9505-7</a>, <a class="reference external" href="https://doi.org/10.1007/s10462-016-9505-7">doi:10.1007/s10462-016-9505-7</a>.</p>
+</dd>
+<dt class="bibtex label" id="legg2007collection"><span class="brackets"><a class="fn-backref" href="#id1">LH07</a></span></dt>
+<dd><p>Shane Legg and Marcus Hutter. A collection of definitions of intelligence. 2007. <a class="reference external" href="https://arxiv.org/abs/0706.3639">arXiv:0706.3639</a>.</p>
+</dd>
+<dt class="bibtex label" id="chc2005"><span class="brackets"><a class="fn-backref" href="#id6">McG05</a></span></dt>
+<dd><p>Kevin McGrew. The cattell-horn-carroll theory of cognitive abilities: past, present, and future. <em>Contemporary Intellectual Assessment: Theories, Tests, and Issues</em>, pages, 01 2005.</p>
+</dd>
+<dt class="bibtex label" id="minsky1968"><span class="brackets"><a class="fn-backref" href="#id2">Min69</a></span></dt>
+<dd><p>Marvin L. Minsky. <em>Semantic Information Processing</em>. The MIT Press, 1969. ISBN 0262130440.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="focus.html" title="previous page">Research focus</a>
+    <a class='right-next' id="next-link" href="transdisciplinary.html" title="next page">Transdisciplinary approach</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Theodoros Galanos<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

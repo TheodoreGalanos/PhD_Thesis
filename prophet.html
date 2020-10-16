@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prophet &#8212; Designing with Intelligence - A General Framework for Mixed-Initiative Generative Design</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Learner" href="learner.html" />
+    <link rel="prev" title="Generator" href="generator.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Designing with Intelligence - A General Framework for Mixed-Initiative Generative Design</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="focus.html">
+   Research focus
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Proposal
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="system.html">
+   A Quick overview of the proposed generative design system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="transdisciplinary.html">
+   Transdisciplinary approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="initiator.html">
+   Initiator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="encoder.html">
+   Encoder
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="generator.html">
+   Generator
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Prophet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="learner.html">
+   Learner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="critic.html">
+   Critic
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/prophet.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="prophet">
+<h1>Prophet<a class="headerlink" href="#prophet" title="Permalink to this headline">¶</a></h1>
+<p>The Prophet module’s role is to quantify design performance for all generated designs, that are meant to be evaluated. Prophet utilizes pretrained, surrogate deep learning (DL) models which transform what is typically a costly, simulation-based evaluation of various performance metrics into a direct evaluation that happens in real-time and requires, in most cases, only a simple visual representation of the generated geometry. It should be noted that performance, in the context of the Prophet module, strictly relates to design performance and not algorithmic performance.</p>
+<p>Prophet is crucial to the proper functioning of the proposed generative system. The feasibility of the whole system relies upon the Prophet module, indeed the main reason that such a system has not been developed yet within the AEC domain is the inescapable cost of evaluations related with design performance. These simulations vary in run time and computational demands, ranging from a few seconds to a few days or even weeks of compute time, depending on the underlying complexity of the design and the metric evaluated. Since Prophet allows us to conduct these evaluations efficiently and in real-time the system can focus instead on generation and developing a truly expressive generative capacity. Prophet is also what transforms large-scale generative design from a primarily offline process to a potentially fully online generation.</p>
+<p>The initial version of the system will support the following design performance evaluations:</p>
+<ul class="simple">
+<li><p><strong>Human Comfort</strong> (HC), relating to thermal, wind, and visual aspects of comfort throughout the space.</p></li>
+<li><p><strong>Daylight Performance</strong> (DP), relating to the distribution and availability of daylight throughout interior space and based on two yearly metrics, Daylight Autonomy (DA) and Useful Daylight Illuminance (UDI) and solar availability in exterior space based on two yearly metrics, Sunlight Hours (SH) and Solar Radiation (SR). This evaluation is climate-specific therefore location-specific surrogate models will be trained.</p></li>
+<li><p><strong>Natural Ventilation Performance</strong> (NVP), relating to the efficiency of wind flow and ventilation throughout the space, measured in terms of flow (m/s) or volume (m3/s).</p></li>
+</ul>
+<p>Each evaluation has its own specific scope and use and while the user should be able to select the metrics she wants for her generative experiment, the system will take care of suggesting appropriate evaluations and performance ranges according to the type of design task at hand.</p>
+<p>Surrogate modeling for design performance evaluation is a potentially disruptive technology given the cost of evaluations in the AEC domain. However, there has been very little adoption in practice. The only tool utilizing pretrained models for real-time prediction currently developed with practice in mind is the Intelligent Framework for Resilient Design <a class="footnote-reference brackets" href="#id7" id="id1">2</a> (InFraRed). InFraRed is able to evaluate urban designs on a variety of important, and expensive, performance metrics, including wind flow and wind comfort. This research builds on the work done with InFraRed, trying to take the next step in the evolution of large-scale generative design which involves building a process that can actually take advantage of real-time performance evaluation.</p>
+<p>While there is little work being done in the industry, there is a lot of research work done in surrogate modeling. Here it should be noted that InFraRed, the idea on which the Prophet module is built on, is not a traditional surrogate model since it is not being trained in real time using evaluations that are run through simulations (the standard process of surrogate modeling). That said it does serve the same function, hence it is closely related. Wortmann et al. <a class="bibtex reference internal" href="#wortmann2015" id="id2">[WCNS15]</a> use radial-basis function surrogate modeling optimization as a method to promote understanding rather than optimization. The method trains a model by interpolating simulation data and explores the solution space in a way that prediction error reduces, within a set budget of evaluations (simulations). Westermann and Evins <a class="bibtex reference internal" href="#westermann2019170" id="id3">[WE19]</a> conduct a comprehensive review on the application of surrogate modeling in the sustainable design domain. They find 57 studies that have been conducted and develop a comprehensive matrix of the methodologies used along with the problem the method it was applied. One interesting fact is that almost all of the surrogate modeling studies were conducted on energy simulation perhaps indicating one of the disadvantages of surrogate modeling, the requirement to run online simulations which for other metrics can take a considerable amount of time, and that requirement remains the same across different studies (no transfer learning).</p>
+<p>The use of surrogate modeling has been very popular in QD, understandable given the large number of evaluations that QD methods require (typically in the order of 100,000).  Gaier et al. <a class="bibtex reference internal" href="#gaier2018dataefficient" id="id4">[GAM18]</a> use surrogate modeling and MAP-Elites as alternative to the classic optimization algorithms on a 2-dimensional airfoil optimization problem. They develop a new illumination algorithm, Surrogated Assisted Illumination (SAIL) that leverages surrogate modeling to create the map of the design space explored. Gaie et al <a class="bibtex reference internal" href="#gaier2017featuresm" id="id5">[GAM17]</a> show that SAIL provides a better performing solution than MAP-Elites and they also compare the QD surrogate modeling approach to a traditional CMA-ES algorithm. It turns out that in the same amount of evaluations required required for CMA-ES to optimize one cell of the design space (that has specific feature values) SAIL finds a near-optimal solution for every cell. In the Gaming AI domain, Karavolos et al. <a class="bibtex reference internal" href="#karavolos2018" id="id6">[KaravolosLiapisYannakakis18]</a> use surrogate modeling for automated level design where they are able to investigate efficiently which level structures would result in a balanced match opening up new possibilities for mixed-initiative design.</p>
+<p>The Prophet module is perhaps the most sensitive part of the system as it relies on external functionality (surrogate or pretrained models that conduct evaluations) for its performance. The main challenge here, especially in the AEC domain where all design tasks are real-life problems with real implications, is related to validation of prediction outputs and the ability to communicate error estimates to the user. It is crucial for the human designer to be able to trust the results of Prophet which makes the visualization of uncertainty (of prediction) a crucial part of Prophet’s functionality. This uncertainty is a requirement for a mixed-initiative system of this kind to work. Another smaller, technical challenge, is to efficiently set up an inferencing pipeline that can manage both large design spaces and predict performance in real-time with a speed that can match generation and direct evaluation.</p>
+<p>Despite all that, Prophet opens up a completely new field for generative design, where evaluation of metrics that actually matter becomes a reality. Prophet allows for essentially parametric design at generative scales and diversity, something that completely changes the way we conduct computational design. Another important aspect is that of lifelong-learning that can happen through the module. Each session the user takes part in generates a new batch of data that can be used as training inputs for model performance improvement. This continuous training can happen at different intervals, depending on user preferences, and can also be fully automated by the system. Prophet will also provide the opportunity to human designers to supply their own simulation data in order to produce new or better pretrained models. Finally, an exciting opportunity is the ability to extract latent representations of the design space not just in the input space but also in the performance space. For this, Prophet’s results will be passed on to the Learner module where models will be trained to learn latent representations of the performance space.</p>
+<p><strong>References:</strong></p>
+<p id="bibtex-bibliography-prophet-0"><dl class="citation">
+<dt class="bibtex label" id="gaier2017featuresm"><span class="brackets"><a class="fn-backref" href="#id5">GAM17</a></span></dt>
+<dd><p>Adam Gaier, Alexander Asteroth, and Jean-Baptiste Mouret. Feature space modeling through surrogate illumination. <em>ArXiv</em>, 2017.</p>
+</dd>
+<dt class="bibtex label" id="gaier2018dataefficient"><span class="brackets"><a class="fn-backref" href="#id4">GAM18</a></span></dt>
+<dd><p>Adam Gaier, Alexander Asteroth, and Jean-Baptiste Mouret. Data-efficient design exploration through surrogate-assisted illumination. 2018. <a class="reference external" href="https://arxiv.org/abs/1806.05865">arXiv:1806.05865</a>.</p>
+</dd>
+<dt class="bibtex label" id="westermann2019170"><span class="brackets"><a class="fn-backref" href="#id3">WE19</a></span></dt>
+<dd><p>Paul Westermann and Ralph Evins. Surrogate modelling for sustainable building design – a review. <em>Energy and Buildings</em>, 198:170 – 186, 2019. URL: <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0378778819302877">http://www.sciencedirect.com/science/article/pii/S0378778819302877</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1016/j.enbuild.2019.05.057">doi:https://doi.org/10.1016/j.enbuild.2019.05.057</a>.</p>
+</dd>
+<dt class="bibtex label" id="wortmann2015"><span class="brackets"><a class="fn-backref" href="#id2">WCNS15</a></span></dt>
+<dd><p>Thomas Wortmann, Alberto Costa, Giacomo Nannicini, and Thomas Schroepfer. Advantages of surrogate models for architectural design optimization. <em>Artificial Intelligence for Engineering Design, Analysis and Manufacturing</em>, 29(4):471–481, 2015. <a class="reference external" href="https://doi.org/10.1017/S0890060415000451">doi:10.1017/S0890060415000451</a>.</p>
+</dd>
+<dt class="bibtex label" id="karavolos2018"><span class="brackets"><a class="fn-backref" href="#id6">KaravolosLiapisYannakakis18</a></span></dt>
+<dd><p>D. Karavolos, A. Liapis, and G. N. Yannakakis. Using a surrogate model of gameplay for automated level design. In <em>2018 IEEE Conference on Computational Intelligence and Games (CIG)</em>, volume, 1–8. 2018.</p>
+</dd>
+</dl>
+</p>
+<hr class="docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dd><p>www.infrared.city</p>
+</dd>
+</dl>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="generator.html" title="previous page">Generator</a>
+    <a class='right-next' id="next-link" href="learner.html" title="next page">Learner</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Theodoros Galanos<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

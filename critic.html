@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Critic &#8212; Designing with Intelligence - A General Framework for Mixed-Initiative Generative Design</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Learner" href="learner.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Designing with Intelligence - A General Framework for Mixed-Initiative Generative Design</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="focus.html">
+   Research focus
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Proposal
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="system.html">
+   A Quick overview of the proposed generative design system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="transdisciplinary.html">
+   Transdisciplinary approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="initiator.html">
+   Initiator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="encoder.html">
+   Encoder
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="generator.html">
+   Generator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prophet.html">
+   Prophet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="learner.html">
+   Learner
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Critic
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/critic.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="critic">
+<h1>Critic<a class="headerlink" href="#critic" title="Permalink to this headline">¶</a></h1>
+<p>Role (from paper):</p>
+<p>The role of the critic is to evaluate all generated designs coming out of the generator, according to constraints communicated by the initiator, fitness based on evaluations of the prophet, latent representations provided by the learner, and its own direct evaluations of designs. From this short description it is obvious that the critic module is the heart of the system, bringing together all modules in the process of evaluation and search through the design space. The critic also checks designs for validity based on both user constraints and geometric constraints related to the architectural domain (e.g. layouts must be closed). There is a range of evaluations that happen within the critic that involve different aspects, qualities and quantities of design performance, a detailed description can be seen in the Table below.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:right head"><p>Details on evaluation tasks performed by the Critic module</p></th>
+<th class="text-align:left head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:right"><p><strong>Daylight Performance</strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Description</p></td>
+<td class="text-align:left"><p>measures the distribution and availability of daylight in indoor spaces</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Possible Metrics</p></td>
+<td class="text-align:left"><p>spatial daylight autonomy (SDA) <a class="bibtex reference internal" href="#nabil-useful-2005" id="id1">[NM05]</a>, useful daylight illuminance (UDI), melanomic lux (EML) <a class="bibtex reference internal" href="#danell-evaluating-nodate" id="id2">[DAR20]</a>, non-visual Direct-Response (nvRD) <a class="bibtex reference internal" href="#danell-evaluating-nodate" id="id3">[DAR20]</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Output Format</p></td>
+<td class="text-align:left"><p>grid-based, array</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Computational Intensity</p></td>
+<td class="text-align:left"><p>high</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Calculation details</p></td>
+<td class="text-align:left"><p>Prophet, online</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p><strong>Visibility Performance</strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Description</p></td>
+<td class="text-align:left"><p>measures the quantity and quality of views to the outside world from every location of the analysis grid</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Possible Metrics</p></td>
+<td class="text-align:left"><p>space syntax <a class="bibtex reference internal" href="#hillier-hanson-1984" id="id4">[HH84]</a> approaches including visibility graph analysis (VGA), visual connectivity and visual integration [cite}<code class="docutils literal notranslate"><span class="pre">turner2011vga</span></code> and augmented VGA <a class="bibtex reference internal" href="#varoudis2015visibilityaa" id="id5">[VP15]</a> analysis</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Output Format</p></td>
+<td class="text-align:left"><p>graph-based and grid-based, array format</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Computational Intensity</p></td>
+<td class="text-align:left"><p>low</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Calculation details</p></td>
+<td class="text-align:left"><p>Critic, online</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p><strong>Thermal Comfort Performance</strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Description</p></td>
+<td class="text-align:left"><p>measures occupants’ comfort throughout the year</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Possible Metrics</p></td>
+<td class="text-align:left"><p>Predicted Mean Vote (PMV) <a class="bibtex reference internal" href="#fanger-thermal-1970" id="id6">[Fan70]</a>, Physiological Equivalent Temperature (PET) <a class="bibtex reference internal" href="#hoppe-heat-1993" id="id7">[Hop93]</a>, Universal Thermal Climate Index <a class="bibtex reference internal" href="#utci" id="id8">[BJB+13]</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Output Format</p></td>
+<td class="text-align:left"><p>grid-based, array format</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Computational Intensity</p></td>
+<td class="text-align:left"><p>very high</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Calculation details</p></td>
+<td class="text-align:left"><p>Prophet, online</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p><strong>Natural Ventilation Performance</strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Description</p></td>
+<td class="text-align:left"><p>measures the availability and magnitute of wind flow and (non mechanical) ventilation through the space</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Possible Metrics</p></td>
+<td class="text-align:left"><p>m/s, m3/s</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Output Format</p></td>
+<td class="text-align:left"><p>grid-based, array format and space-based (average, min, max)</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Computational Intensity</p></td>
+<td class="text-align:left"><p>very high</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Calculation details</p></td>
+<td class="text-align:left"><p>Prophet, online</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p><strong>Network-based Performance</strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Description</p></td>
+<td class="text-align:left"><p>measures the effect of layout design on aspects related to flow, occupancy, accessibility, and efficiency of traversing the space</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Possible Metrics</p></td>
+<td class="text-align:left"><p>adjacencies, connectivity, buzz <a class="bibtex reference internal" href="#nagy-buzz-2017" id="id9">[NVSB17]</a>, distraction, space for communication <a class="bibtex reference internal" href="#pachilova-providing-2020" id="id10">[PS17]</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Output Format</p></td>
+<td class="text-align:left"><p>graph-based and grid-based, array format</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Computational Intensity</p></td>
+<td class="text-align:left"><p>low</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Calculation details</p></td>
+<td class="text-align:left"><p>Critic, online</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p><strong>Acoustic Performance</strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Description</p></td>
+<td class="text-align:left"><p>measures noise levels and noise dissipation given interior or exterior sources of sound</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Possible Metrics</p></td>
+<td class="text-align:left"><p>dBA</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Output Format</p></td>
+<td class="text-align:left"><p>grid-based, array format</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Computational Intensity</p></td>
+<td class="text-align:left"><p>medium</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Calculation details</p></td>
+<td class="text-align:left"><p>Prophet, online</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p><strong>Safety Performance</strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Description</p></td>
+<td class="text-align:left"><p>measures the impact of layout design to egress time</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Possible Metrics</p></td>
+<td class="text-align:left"><p>distance-to-exit</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Output Format</p></td>
+<td class="text-align:left"><p>grid-based, array format</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Computational Intensity</p></td>
+<td class="text-align:left"><p>low</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Calculation details</p></td>
+<td class="text-align:left"><p>Critic, online</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p><strong>Crowd-based Performance</strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Description</p></td>
+<td class="text-align:left"><p>measure impact of design to behavioral responses of occupants</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Possible Metrics</p></td>
+<td class="text-align:left"><p>evacuation time, exit flow rate, traveled distance</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Output Format</p></td>
+<td class="text-align:left"><p>grid-based, array format</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Computational Intensity</p></td>
+<td class="text-align:left"><p>high</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Calculation details</p></td>
+<td class="text-align:left"><p>Critic, offline</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p><strong>Model Performance</strong></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Description</p></td>
+<td class="text-align:left"><p>measure geometric properties of generated designs</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Possible Metrics</p></td>
+<td class="text-align:left"><p>area (m2), number of rooms, number of different spaces, material quantities, window to wall ratio, cost, environmental emissions</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Output Format</p></td>
+<td class="text-align:left"><p>value-based, array format</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Computational Intensity</p></td>
+<td class="text-align:left"><p>low</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>Calculation details</p></td>
+<td class="text-align:left"><p>Critic, online</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Literature review (TODO) on Critic:</p>
+<p>Challenges:</p>
+<p>The main challenge for the critic module is to develop flexible processes for assessing constraints of different types, used in the various evaluations the user has selected, across different use cases and design tasks. This includes an efficient way to incorporate information from different sources such us initiator and encoder, prophet, and generator. A more conceptual problem related to the high-dimensional nature of architectural design spaces is how to restrict the search without compromising novelty in generated designs.</p>
+<p>Opportunities:</p>
+<p>The most exciting opportunity is being able to evaluate designs in the latent space instead of or in combination with the output space. This can provide a much more intuitive way for human designers to guide generation and understand the relationship between their design decisions and the outputs the system produces. Another opportunity is to create a tool that can evaluate functions related to the use and operation of the buildings, apart from the traditional design performance approach. Finally, another opportunity is to explore the co-evolution between design performance and morphology within perhaps a reinforcement learning (RL) framework.</p>
+<p id="bibtex-bibliography-critic-0"><dl class="citation">
+<dt class="bibtex label" id="utci"><span class="brackets"><a class="fn-backref" href="#id8">BJB+13</a></span></dt>
+<dd><p>Krzysztof Blazejczyk, Gerd Jendritzky, Peter Bröde, Dusan bullet, Dusan Fiala, George bullet, George Havenith, Yoram bullet, Yoram Epstein, bullet Psikuta, and Bernhard Kampmann. An introduction to the universal thermal climate index (utci). <em>Geographia Polonica</em>, 86:5–10, 01 2013.</p>
+</dd>
+<dt class="bibtex label" id="danell-evaluating-nodate"><span class="brackets">DAR20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>)</span></dt>
+<dd><p>Megan Danell, María L Ámundadóttir, and Siobhan Rockcastle. Evaluating temporal and spatial light exposure profiles for typical building occupants. <em>Simulation for Architecture and Urban Design</em>, pages 8, 2020.</p>
+</dd>
+<dt class="bibtex label" id="fanger-thermal-1970"><span class="brackets"><a class="fn-backref" href="#id6">Fan70</a></span></dt>
+<dd><p>P.O. Fanger. <em>Thermal Comfort: Analysis and Applications in Environmental Engineering</em>. Danish Technical Press, 1970. ISBN 978-87-571-0341-0.</p>
+</dd>
+<dt class="bibtex label" id="hillier-hanson-1984"><span class="brackets"><a class="fn-backref" href="#id4">HH84</a></span></dt>
+<dd><p>Bill Hillier and Julienne Hanson. <em>The Social Logic of Space</em>. Cambridge University Press, 1984. <a class="reference external" href="https://doi.org/10.1017/CBO9780511597237">doi:10.1017/CBO9780511597237</a>.</p>
+</dd>
+<dt class="bibtex label" id="hoppe-heat-1993"><span class="brackets"><a class="fn-backref" href="#id7">Hop93</a></span></dt>
+<dd><p>P.R. Hoppe. Heat balance modelling. <em>Experientia</em>, pages 741–746, 1993.</p>
+</dd>
+<dt class="bibtex label" id="nabil-useful-2005"><span class="brackets"><a class="fn-backref" href="#id1">NM05</a></span></dt>
+<dd><p>A Nabil and J Mardaljevic. Useful daylight illuminance: a new paradigm for assessing daylight in buildings. <em>Lighting Research &amp; Technology</em>, 37(1):41–57, 2005.</p>
+</dd>
+<dt class="bibtex label" id="nagy-buzz-2017"><span class="brackets"><a class="fn-backref" href="#id9">NVSB17</a></span></dt>
+<dd><p>Danil Nagy, Lorenzo Villaggi, James Stoddart, and David Benjamin. The buzz metric: a graph-based method for quantifying productive congestion in generative space planning for architecture. <em>Technology\textbar Architecture + Design</em>, 1(2):186–195, 2017. URL: <a class="reference external" href="https://www.tandfonline.com/doi/full/10.1080/24751448.2017.1354617">https://www.tandfonline.com/doi/full/10.1080/24751448.2017.1354617</a>.</p>
+</dd>
+<dt class="bibtex label" id="pachilova-providing-2020"><span class="brackets"><a class="fn-backref" href="#id10">PS17</a></span></dt>
+<dd><p>Rosica Pachilova and Kerstin Sailer. Providing care quality by design: a new measure to assess hospital ward layouts. <em>The Journal of Architecture</em>, 25(2):186–202, 2020-02-17. URL: <a class="reference external" href="https://www.tandfonline.com/doi/full/10.1080/13602365.2020.1733802">https://www.tandfonline.com/doi/full/10.1080/13602365.2020.1733802</a>, <a class="reference external" href="https://doi.org/10.1080/13602365.2020.1733802">doi:10.1080/13602365.2020.1733802</a>.</p>
+</dd>
+<dt class="bibtex label" id="varoudis2015visibilityaa"><span class="brackets"><a class="fn-backref" href="#id5">VP15</a></span></dt>
+<dd><p>Tasos Varoudis and Alan Penn. Visibility, accessibility and beyond: next generation visibility graph analysis. <em>The Journal of Space Syntax</em>, 2015.</p>
+</dd>
+</dl>
+</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="learner.html" title="previous page">Learner</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Theodoros Galanos<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

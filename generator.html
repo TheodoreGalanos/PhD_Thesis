@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generator &#8212; Designing with Intelligence - A General Framework for Mixed-Initiative Generative Design</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Prophet" href="prophet.html" />
+    <link rel="prev" title="Encoder" href="encoder.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Designing with Intelligence - A General Framework for Mixed-Initiative Generative Design</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="focus.html">
+   Research focus
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Proposal
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="system.html">
+   A Quick overview of the proposed generative design system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="transdisciplinary.html">
+   Transdisciplinary approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="initiator.html">
+   Initiator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="encoder.html">
+   Encoder
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Generator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prophet.html">
+   Prophet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="learner.html">
+   Learner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="critic.html">
+   Critic
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/generator.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="generator">
+<h1>Generator<a class="headerlink" href="#generator" title="Permalink to this headline">¶</a></h1>
+<p>The role of the Generator module is to automatically produce designs out of the encoded representations, user inputs and constraints. The ways to produce designs, uses, algorithms, and levels of control are numerous. In order to identify the possibilities of the Generator module it is helpful to consider properties of a taxonomy of generators and try to identify which of these properties are important, or possible, for the Generator module. We refer to the taxonomy of generators from the framework of Procedurally Generated Content (PCG) defined in <a class="bibtex reference internal" href="#togelius2016pcg" id="id1">[ST16]</a> and try to adapt it to the AEC domain. The main practical choices detailed in the taxonomy are:</p>
+<ul class="simple">
+<li><p><strong>Online vs. offline</strong>: a generator can produce content while the designer is interacting with the tool (online) or in batches during downtime (offline). Online generation  “places  two  or  three  main  requirements on the algorithm: that it is very fast, that it has a predictable runtime and (depending on the context) that its results are of a predictable quality” <a class="bibtex reference internal" href="#togelius2016pcg" id="id2">[ST16]</a>. In principle, generation for a design tool should be online as the designer should immediately receive generated content as a response to their current action. In theory, however, an offline generator could run a priori for many hours, producing a large database of diverse possible designs and then, during the design process, the most appropriate design could be chosen from the database and shown to the user.</p></li>
+<li><p><strong>Necessary vs. optional content</strong>: a generator can produce elements that are central to the design’s function (necessary) or elements which are mostly decorative and could be either omitted or replaced by a different element without affecting the design’s function (optional). In terms of design, an example of collection of necessary content is a building’s layout  where all rooms must be connected through doorways, the doors should be high enough for residents to pass through, and so on, while the doors’ wood color or a room’s wallpaper motif is optional content.</p></li>
+<li><p><strong>Random seeds versus parameter vectors</strong>: the level of control that the generator has over the content affects both the type of designs that can be produced and the balance between computational and human initiative. Parametric architecture has already shown how a parameter vector can affect a design; however, the level of control of the generator remains pertinent. A well-defined, narrow set of design parameters can allow the generator to search for optimal designs without making large changes to a human-authored design, but this approach sacrifices diversity. On the other hand, allowing for more freedom, either through larger parameter spaces or from more flexible representations, can lead to novel and creative solutions that local search would not be able to discover.</p></li>
+<li><p><strong>Stochastic vs. deterministic generation</strong>: the degree of randomness (stochasticity) affects the potential of the generator to discover new and creative solutions, but also contributes to the risk of dramatic changes that can move the solution far from the designer’s intentions. Deterministic processes allow the designer to anticipate what the generator will do, and are thus easier to explain. They also might be more appropriate for transformations of one type of content into another (e.g. a hand-drawn sketch to a floor layout). On the other hand, stochastic processes allow the infusion of contingency and surprise in the generation process, a crucial element of a truly expressive generator.</p></li>
+<li><p><strong>Constructive vs. generate-and-test</strong>: the types of algorithms in PCG are often distinguished between those that perform “operations, or sequences of operations, that are guaranteed to never produce broken content’” <a class="bibtex reference internal" href="#togelius2016pcg" id="id3">[ST16]</a> (constructive) versus those that evaluate the quality of the produced content and re-generate a new solution if it is of insufficient quality (generate-and-test).</p></li>
+</ul>
+<p>It is interesting to think of generative design in the context of the AEC through the above properties of the taxonomy proposed. Concerning the way designs are generated, almost by default, the offline method is utilized in generative design settings due to the way the popular design software (Rhino/GH, Revit/Dynamo, Forge) work. Given the expensive evaluation costs for most interesting metrics we want to quantify in the AEC, the offline setting does seem to be currently the best candidate for large scale design exploration, which is what the current proposed systems endeavors to develop, although online generation as a second step would be an interesting addition to the system allowing for mixed-initiative design elements, where the human designer investigates and alters the offline generated collection. When it comes to content, things are much clearer. For architectural and engineering design most, if not all, content produced during early concept phases is necessary. There are very few aesthetic elements that we would care to incorporate in conceptual design at that stage. In lieu of content generation, it’s also hard to imagine many cases where random parameter vectors of any kind could produce meaningful and valid designs. Instead, we expect that at least several geometric primitives (points, lines, polygons, and so on) will have to be present in order to be able to generate and evolve complex designs. Things get more interesting when we consider the horizon of the generative and search processes. At this point in time, most design generation happens strictly in the deterministic domain, again mostly due to the restrictions imposed by the design software and partly by the paradigm of parametric design that is currently popular in practice. Some more stochastic approaches do exist, but those are scarce and typically found in the academic domain, with practical applications preferring instead ease of use and transparency of generative methods. Finally, for very similar reasons, the constructive approach is predominant in the AEC. In fact, determinism and constructivism seem to be the two philosophical pillars of the current state-of-the-art, practical generative design, something that severely limits the potential expressivity of generators and their ability to find truly new, interesting, and well-performing designs.</p>
+<p>The most influential choice for the Generator of course is the one of the generative algorithms used to generate designs. There are multitude of generative algorithms that have been used for content generation, across many domains, with varying implementation details and implications for search. Jie Lim et al. <a class="bibtex reference internal" href="#limca2020" id="id4">[SJLW20]</a> use Cellular Automata (CA) for the generation of mass-customized building blocks in Jakarta’s kampungs (informal urban settlements). A combination of bottom-up rule sets for the CA and top-down strategies of development is used in a process that aims to improve the environmental performance of generated morphologies. Christiane and Thomas <a class="bibtex reference internal" href="#christianeca2005" id="id5">[HK05]</a>  use CA to generate high-density building form. In contrast to typical CA approaches, their research focuses on the re-modelling of an existing project, showing the value of CA on a more practical real-life design task. Koenig and Bauriedel <a class="bibtex reference internal" href="#koeningca2009" id="id6">[KB09]</a> present a CA method to steer precisely the generation of settlement structures with regard  to their global and local density as well as the size and number of  forming clusters, allowing for precise control over the developing structure, an important functionality when using stochastic generation processes like CA.</p>
+<p>Much more research has been done on evolutionary processes for design generation, and especially Genetic Algorithms (GA) in the AEC.  Schneider et al. <a class="bibtex reference internal" href="#schneiderga2011" id="id7">[SFKonig11]</a> present a creative evolutionary methodology for layout problems that explores the design space across the dimensions of intuition and rationality in a variety of ways. The paper highlights the importance of identifying important behavioral descriptors of the design space that relate to the human designer. Byrne et al. <a class="bibtex reference internal" href="#byrnega2011" id="id8">[BFH+11]</a> evolve designs by their ability to handle physical, structural, constraints in a process where the physical constraints interact with aesthetic considerations of the human designer. They combine the evolutionary approach with a design grammar that is capable of evolving aesthetically pleasing designs. In another Shape Grammar (SG) approach, Lipp et al. <a class="bibtex reference internal" href="#lippsg2008" id="id9">[LWW08]</a> introduce a real-time interactive editing paradigm that allows the human designer to create rules in an intuitive manner. The work explores the important MID implications of real-time generation of such systems. Bielik et al. <a class="bibtex reference internal" href="#bielik2012" id="id10">[BSK12]</a> use DecodingSpaces, a graph-based analysis toolset, to generate a variety of different urban designs according to detailed design parameters and properties of the urban area. For the AEC domain, tools that enable the generation of an initial seed population of designs might prove to be critical for large-scale generative design. Recently, Nauata et al. <a class="bibtex reference internal" href="#nauata2020housegan" id="id11">[NCC+20]</a> developed House-GAN, a relational Generative Adversarial Network model for graph-constrained layout generation which improved the state-0f-the-art in layout generation. They also provide an intuitive interface through which the designer can, in real-time, interactively draw adjacency graphs and see generated layouts. DL models will potentially be crucial for the Generator going forward, especially in design domains where evolution of a design is complex and cumbersome, and can potentially provide a streamlined way to generate design alternatives.</p>
+<p>A lot of parallel research in all of these domains has also been conducted in the PCG and Gaming AI field (see for example <a class="bibtex reference internal" href="#liapis2018" id="id12">[KaravolosLiapisYannakakis18]</a>, <a class="bibtex reference internal" href="#shaker-automaticgeneration" id="id13">[SSN+]</a>, <a class="bibtex reference internal" href="#liapis2013" id="id14">[LYT13]</a>, <a class="bibtex reference internal" href="#shaker2010" id="id15">[SYT10]</a> among many others) with a lot of interesting results and generative design approaches. But the most important, newly emerging, domain of research, focusing on a new approach of expressive generation of design alternatives with a focus on design exploration, is that of Quality Diversity (QD). The QD field was initiated by the seminal work of Stanley and Lehman <a class="bibtex reference internal" href="#lehman2011" id="id16">[LehmanStanley11]</a> on the idea of Novelty Search (NS), searching through a design space without objective. This has lead to an explosion of research around NS, which coupled to the idea of quality (in place of objective) creates the notion of Quality-Diversity. The goal of QD is to create a process that produces a diversity of organisms (or designs) that are all high performing in their own niche. The most successful algorithm that came out of QD is MAP-Elites by Clune and Mouret <a class="bibtex reference internal" href="#mouret2015illuminating" id="id17">[MC15]</a> which develops a collection of well-performing designs (elites) across a discretized behavioral space. QD and MAP-Elites revolutionize the way we approach design exploration and optimization in the AEC, by focusing on exploration while still finding both interesting and well-performing designs. Instead of one, or a front of, good solution(s) as with typical evolutionary approaches, QD finds a whole collection of designs which can have different characteristics and in fact could be useful in different design tasks and constraints. QD will be the focus of the generation-evaluation-selection process in the proposed system and will heavily influence the inner workings of the Generator and Critic modules.</p>
+<p>The Generator, like all other modules of the system, comes with its own set of challenges and opportunities. A core challenge is whether it can consistently create content that is coherent, valid, original, creative, and performative. Architectural design has always been considered too difficult to do well in an automated way. This is where the QD approach can prove significant in allowing for proper exploration of diverse design spaces. Additionally, the need for consistency and computational speed is paramount. Furthermore, the level of control of a generator is also important, especially if a proper MID interface is to be developed. However, having more parameters that can affect the generator may also create broken content which increases the computational effort needed from the generator and mental effort by the human designer. Relatedly, efficient data pipelines and data-efficient representations need to be developed to allow quick transfer of data between the generator and other system modules. While individual designs are typically quite light-weight, having design spaces that range in the 100s of thousands of alternatives can become a bottleneck and has to be dealt with during system design.</p>
+<p>Just like before, one of the biggest opportunities in the Generator module seems to be related with learning, in this case the being able to learn how to express specific architectural styles and typologies, and even specific styles of the human designer through the evaluation of his decisions. How to transfer that knowledge to other tasks is also an interesting research and might be a way to speed up subsequent design generation tasks. In combination with the Learner module, the Generator could use (DL) methods to find new ways to generate content. One such method is the “forward pass” method which involves the following process:</p>
+<ul>
+<li><p>Generate a collection of designs without performance evaluation.</p></li>
+<li><p>Train a model that learns an embedding of the latent space of the design collection generated.</p></li>
+<li><p>Use the pretrained model to guide generation in two ways:</p>
+<ul class="simple">
+<li><p>unsupervised generation, where novelty can be defined as distance between designs in the latent space;</p></li>
+<li><p>supervised generation, creating ‘nobs’ that allow the user to search across the dimensions of the latent space instead of the input space.</p></li>
+</ul>
+<p>The design of the proposed system enables the investigation of several of these ideas, some of which may become crucial for the generative design going forward.</p>
+</li>
+</ul>
+<p><strong>References:</strong></p>
+<p id="bibtex-bibliography-generator-0"><dl class="citation">
+<dt class="bibtex label" id="bielik2012"><span class="brackets"><a class="fn-backref" href="#id10">BSK12</a></span></dt>
+<dd><p>Martin Bielik, Sven Schneider, and Reinhard König. Parametric urban patterns: exploring and integrating graph-based spatial properties in parametric urban modelling. In volume. 2012.</p>
+</dd>
+<dt class="bibtex label" id="byrnega2011"><span class="brackets"><a class="fn-backref" href="#id8">BFH+11</a></span></dt>
+<dd><p>Jonathan Byrne, Michael Fenton, Erik Hemberg, James Mcdermott, Michael O’Neill, Elizabeth Shotton, and Ciaran Mcnally. Combining structural analysis and multi-objective criteria for evolutionary architectural design. In volume 6625, 204–213. 04 2011. <a class="reference external" href="https://doi.org/10.1007/978-3-642-20520-0_21">doi:10.1007/978-3-642-20520-0_21</a>.</p>
+</dd>
+<dt class="bibtex label" id="christianeca2005"><span class="brackets"><a class="fn-backref" href="#id5">HK05</a></span></dt>
+<dd><p>Christiane M. Herr and Thomas Kvan. Using cellular automata to generate high-density building form. In Bob Martens and Andre Brown, editors, <em>Computer Aided Architectural Design Futures 2005</em>, 249–258. Dordrecht, 2005. Springer Netherlands.</p>
+</dd>
+<dt class="bibtex label" id="koeningca2009"><span class="brackets"><a class="fn-backref" href="#id6">KB09</a></span></dt>
+<dd><p>Reinhard Koenig and Christian Bauriedel. Generating settlement structures: a method for urban planning and analysis supported by cellular automata. <em>Environment and Planning B: Planning and Design</em>, 36(4):602–624, 2009. <a class="reference external" href="https://doi.org/10.1068/b34025">doi:10.1068/b34025</a>.</p>
+</dd>
+<dt class="bibtex label" id="liapis2013"><span class="brackets"><a class="fn-backref" href="#id14">LYT13</a></span></dt>
+<dd><p>Antonios Liapis, Georgios Yannakakis, and Julian Togelius. Enhancements to constrained novelty search: two-population novelty search for generating game content. In <em>GECCO 2013 - Proceedings of the 2013 Genetic and Evolutionary Computation Conference</em>, 343–350. 07 2013. <a class="reference external" href="https://doi.org/10.1145/2463372.2463416">doi:10.1145/2463372.2463416</a>.</p>
+</dd>
+<dt class="bibtex label" id="lippsg2008"><span class="brackets"><a class="fn-backref" href="#id9">LWW08</a></span></dt>
+<dd><p>Markus Lipp, Peter Wonka, and Michael Wimmer. Interactive visual editing of grammars for procedural architecture. <em>Association for Computing Machinery</em>, 2008. <a class="reference external" href="https://doi.org/10.1145/1360612.1360701">doi:10.1145/1360612.1360701</a>.</p>
+</dd>
+<dt class="bibtex label" id="mouret2015illuminating"><span class="brackets"><a class="fn-backref" href="#id17">MC15</a></span></dt>
+<dd><p>Jean-Baptiste Mouret and Jeff Clune. Illuminating search spaces by mapping elites. 2015. <a class="reference external" href="https://arxiv.org/abs/1504.04909">arXiv:1504.04909</a>.</p>
+</dd>
+<dt class="bibtex label" id="nauata2020housegan"><span class="brackets"><a class="fn-backref" href="#id11">NCC+20</a></span></dt>
+<dd><p>Nelson Nauata, Kai-Hung Chang, Chin-Yi Cheng, Greg Mori, and Yasutaka Furukawa. House-gan: relational generative adversarial networks for graph-constrained house layout generation. 2020. <a class="reference external" href="https://arxiv.org/abs/2003.06988">arXiv:2003.06988</a>.</p>
+</dd>
+<dt class="bibtex label" id="schneiderga2011"><span class="brackets"><a class="fn-backref" href="#id7">SFKonig11</a></span></dt>
+<dd><p>Sven Schneider, Jan-Ruben Fischer, and Reinhard König. Rethinking automated layout design: developing a creative evolutionary design method for the layout problems in architecture and urban design. In John S. Gero, editor, <em>Design Computing and Cognition ‘10</em>, 367–386. Dordrecht, 2011. Springer Netherlands.</p>
+</dd>
+<dt class="bibtex label" id="shaker-automaticgeneration"><span class="brackets"><a class="fn-backref" href="#id13">SSN+</a></span></dt>
+<dd><p>Mohammad Shaker, Mhd Hasan Sarhan, Ola Al Naameh, Noor Shaker, and Julian Togelius. Automatic generation and analysis of physics-based puzzle games.</p>
+</dd>
+<dt class="bibtex label" id="togelius2016pcg"><span class="brackets">ST16</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>)</span></dt>
+<dd><p>Noor Shaker and Julian Togelius. The search-based approach. In Noor Shaker, Julian Togelius, and Mark J. Nelson, editors, <em>Procedural Content Generation in Games</em>, pages 17–29. Springer, 2016.</p>
+</dd>
+<dt class="bibtex label" id="shaker2010"><span class="brackets"><a class="fn-backref" href="#id15">SYT10</a></span></dt>
+<dd><p>Noor Shaker, Georgios Yannakakis, and Julian Togelius. Towards automatic personalized content generation for platform games. In <em>Proceedings of the 6th AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment, AIIDE 2010</em>. 12 2010.</p>
+</dd>
+<dt class="bibtex label" id="limca2020"><span class="brackets"><a class="fn-backref" href="#id4">SJLW20</a></span></dt>
+<dd><p>Varvara Vasilatou Song Jie Lim and Shih Hsin Wuu. The use of ca to generate informal architectural systems. In <em>SimAUD 2020, Society for Modeling &amp; Simulation International</em>. 2020.</p>
+</dd>
+<dt class="bibtex label" id="liapis2018"><span class="brackets"><a class="fn-backref" href="#id12">KaravolosLiapisYannakakis18</a></span></dt>
+<dd><p>D. Karavolos, A. Liapis, and G. N. Yannakakis. Using a surrogate model of gameplay for automated level design. In <em>2018 IEEE Conference on Computational Intelligence and Games (CIG)</em>, volume, 1–8. 2018.</p>
+</dd>
+<dt class="bibtex label" id="lehman2011"><span class="brackets"><a class="fn-backref" href="#id16">LehmanStanley11</a></span></dt>
+<dd><p>J. Lehman and K. O. Stanley. Abandoning objectives: evolution through the search for novelty alone. <em>Evolutionary Computation</em>, 19(2):189–223, 2011.</p>
+</dd>
+</dl>
+</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="encoder.html" title="previous page">Encoder</a>
+    <a class='right-next' id="next-link" href="prophet.html" title="next page">Prophet</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Theodoros Galanos<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>
