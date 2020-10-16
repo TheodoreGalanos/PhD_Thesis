@@ -95,10 +95,10 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Proposal
+  Introduction
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="system.html">
    A Quick overview of the proposed generative design system
@@ -109,6 +109,13 @@
    Transdisciplinary approach
   </a>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  System Modules
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="initiator.html">
    Initiator
@@ -214,8 +221,7 @@
                 
   <div class="section" id="critic">
 <h1>Critic<a class="headerlink" href="#critic" title="Permalink to this headline">¶</a></h1>
-<p>Role (from paper):</p>
-<p>The role of the critic is to evaluate all generated designs coming out of the generator, according to constraints communicated by the initiator, fitness based on evaluations of the prophet, latent representations provided by the learner, and its own direct evaluations of designs. From this short description it is obvious that the critic module is the heart of the system, bringing together all modules in the process of evaluation and search through the design space. The critic also checks designs for validity based on both user constraints and geometric constraints related to the architectural domain (e.g. layouts must be closed). There is a range of evaluations that happen within the critic that involve different aspects, qualities and quantities of design performance, a detailed description can be seen in the Table below.</p>
+<p>The role of the Critic is to evaluate all generated designs coming out of the generator, according to constraints communicated by the Initiator, fitness calculated from evaluations of the Prophet, latent representations provided by the Learner, and its own direct evaluations of designs. From this short description it is obvious that the Critic module is the heart of the system, bringing together almost all previous modules in the process of evaluation and search through the design space. The Critic also checks designs for validity based on both user constraints and geometric constraints related to the architectural domain (e.g. layouts must be closed or buildings can not intersect). There is a range of evaluations that happen within the critic that involve different aspects, qualities and quantities of design performance, a detailed description can be seen in the Table below.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:right head"><p>Details on evaluation tasks performed by the Critic module</p></th>

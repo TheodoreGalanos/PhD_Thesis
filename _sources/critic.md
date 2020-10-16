@@ -1,8 +1,6 @@
 # Critic
 
-Role (from paper):
-
-The role of the critic is to evaluate all generated designs coming out of the generator, according to constraints communicated by the initiator, fitness based on evaluations of the prophet, latent representations provided by the learner, and its own direct evaluations of designs. From this short description it is obvious that the critic module is the heart of the system, bringing together all modules in the process of evaluation and search through the design space. The critic also checks designs for validity based on both user constraints and geometric constraints related to the architectural domain (e.g. layouts must be closed). There is a range of evaluations that happen within the critic that involve different aspects, qualities and quantities of design performance, a detailed description can be seen in the Table below.
+The role of the Critic is to evaluate all generated designs coming out of the generator, according to constraints communicated by the Initiator, fitness calculated from evaluations of the Prophet, latent representations provided by the Learner, and its own direct evaluations of designs. From this short description it is obvious that the Critic module is the heart of the system, bringing together almost all previous modules in the process of evaluation and search through the design space. The Critic also checks designs for validity based on both user constraints and geometric constraints related to the architectural domain (e.g. layouts must be closed or buildings can not intersect). There is a range of evaluations that happen within the critic that involve different aspects, qualities and quantities of design performance, a detailed description can be seen in the Table below.
 
 
 
